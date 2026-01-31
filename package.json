@@ -1,0 +1,26 @@
+{
+  "name": "first-france-challenge-website",
+  "version": "1.0.0",
+  "description": "A website for the First France Challenge robotics competition.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process not defined yet.'"
+  },
+  "keywords": [
+    "robotics",
+    "competition",
+    "First France Challenge"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "homepage": "https://yourwebsite.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/first-france-challenge-website.git"
+  }
+}
