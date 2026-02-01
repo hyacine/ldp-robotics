@@ -1007,7 +1007,7 @@ main {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   margin: 0 48px 56px 48px;
 }
@@ -1130,7 +1130,7 @@ main {
 
 .support-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   margin: 0 48px 56px 48px;
 }
@@ -1225,8 +1225,11 @@ main {
 .support-faq {
   background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 107, 107, 0.1));
   padding: 56px 48px;
-  border-radius: 16px;
-  border: 2px solid rgba(78, 205, 196, 0.2);
+  border-radius: 0;
+  border: none;
+  border-top: 2px solid rgba(78, 205, 196, 0.2);
+  margin: 0 0 0 0;
+  width: 100%;
 }
 
 .support-faq h2 {
@@ -1237,12 +1240,23 @@ main {
   font-weight: 700;
 }
 
-.faq-item {
-  margin-bottom: 32px;
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
-.faq-item:last-child {
-  margin-bottom: 0;
+.faq-item {
+  background: var(--white);
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
 
 .faq-item h4 {
@@ -1253,7 +1267,7 @@ main {
 }
 
 .faq-item p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text);
   margin: 0;
@@ -1273,11 +1287,17 @@ main {
 
 @media (max-width: 1024px) {
   .about-grid {
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 32px 56px 32px;
   }
 
   .support-grid {
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 32px 56px 32px;
+  }
+
+  .faq-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1349,6 +1369,10 @@ main {
 
   .support-faq {
     padding: 40px 24px;
-    margin: 0 0 0 0;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
