@@ -887,20 +887,14 @@ main {
 
 /* ========== SOUTENEZ-NOUS PAGE ========== */
 .support-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
   gap: 32px;
   margin-top: 40px;
+  flex-wrap: wrap; /* permet retour à la ligne si pas assez d’espace */
 }
 
 .support-card {
-  background: var(--white);
-  padding: 32px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid var(--accent-1);
-  transition: all 0.3s ease;
-  text-align: center;
+  flex: 1 1 320px;
 }
 
 .support-card:hover {
