@@ -890,11 +890,20 @@ main {
   display: flex;
   gap: 32px;
   margin-top: 40px;
-  flex-wrap: wrap; /* permet retour à la ligne si pas assez d’espace */
+  flex-wrap: wrap; /* retour à la ligne si manque d’espace */
+  justify-content: center; /* centre les cartes */
 }
 
 .support-card {
   flex: 1 1 320px;
+  max-width: 380px;
+  background: var(--white);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--accent-1);
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
 .support-card:hover {
@@ -930,11 +939,14 @@ main {
 
 @media (max-width: 768px) {
   .support-content {
-    grid-template-columns: 1fr;
+    flex-direction: column; /* passe en vertical sur mobile */
+    align-items: center;
     gap: 24px;
   }
 
   .support-card {
+    width: 100%;
+    max-width: 100%;
     padding: 24px;
   }
 
