@@ -1007,7 +1007,7 @@ main {
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 28px;
   margin: 0 48px 56px 48px;
 }
@@ -1130,7 +1130,7 @@ main {
 
 .support-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 28px;
   margin: 0 48px 56px 48px;
 }
@@ -1273,12 +1273,10 @@ main {
 
 @media (max-width: 1024px) {
   .about-grid {
-    grid-template-columns: repeat(2, 1fr);
     margin: 0 32px 56px 32px;
   }
 
   .support-grid {
-    grid-template-columns: repeat(2, 1fr);
     margin: 0 32px 56px 32px;
   }
 }
