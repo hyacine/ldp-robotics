@@ -975,44 +975,88 @@ main {
   margin: 0 auto;
 }
 
-.about-grid {
+.about-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: stretch;
   margin-bottom: 56px;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, var(--accent-2) 0%, #00bfb3 100%);
+  color: var(--white);
+  padding: 56px 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(78, 205, 196, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-hero h2 {
+  font-size: 2.2rem;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+.about-hero .lead {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.95;
+  font-style: italic;
+}
+
+.about-content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .about-card {
   background: var(--white);
-  padding: 40px 32px;
+  padding: 36px 28px;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   border-top: 5px solid var(--accent-2);
   transition: all 0.3s ease;
   position: relative;
+  display: flex;
+  gap: 16px;
 }
 
 .about-card .card-icon {
-  font-size: 3.4rem;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  flex-shrink: 0;
+  min-width: 60px;
   display: block;
+}
+
+.about-card > div:not(.card-icon) {
+  flex: 1;
 }
 
 .about-card:hover {
   box-shadow: 0 12px 36px rgba(78, 205, 196, 0.25);
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 }
 
 .about-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--accent-2);
-  margin: 0 0 16px 0;
+  margin: 0 0 8px 0;
   font-weight: 700;
 }
 
 .about-card p {
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--text);
   margin: 0;
 }
@@ -1063,13 +1107,23 @@ main {
   margin: 0 auto;
 }
 
+.support-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: stretch;
+  margin-bottom: 56px;
+}
+
 .support-banner {
   background: linear-gradient(135deg, var(--accent-1), #ff5252);
   color: var(--white);
-  padding: 48px 48px;
+  padding: 48px 40px;
   border-radius: 16px;
-  margin-bottom: 56px;
   box-shadow: 0 12px 40px rgba(255, 107, 107, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .support-banner h2 {
@@ -1079,26 +1133,26 @@ main {
 }
 
 .support-banner p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   margin: 0;
 }
 
 .support-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
-  margin-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .support-card {
   background: var(--white);
-  padding: 40px 32px;
+  padding: 32px 28px;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   display: flex;
-  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
   position: relative;
   overflow: hidden;
 }
@@ -1114,46 +1168,46 @@ main {
 }
 
 .support-card .support-icon {
-  font-size: 3.6rem;
-  margin-bottom: 20px;
+  font-size: 3.2rem;
+  flex-shrink: 0;
+  min-width: 70px;
   display: block;
   animation: float 3s ease-in-out infinite;
 }
 
 .support-card:hover {
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
-  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
 }
 
 .support-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--text);
-  margin: 0 0 16px 0;
+  margin: 0 0 8px 0;
   font-weight: 700;
 }
 
 .support-description {
   flex-grow: 1;
-  margin-bottom: 24px;
+  min-width: 0;
 }
 
 .support-description p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text);
-  margin: 0 0 16px 0;
+  margin: 0 0 12px 0;
 }
 
 .benefit-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 .benefit {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--muted);
-  padding: 8px 0;
   font-weight: 500;
 }
 
@@ -1163,17 +1217,20 @@ main {
   background: linear-gradient(135deg, var(--accent-1), #ff5252);
   text-decoration: none;
   font-weight: 600;
-  padding: 14px 28px;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 6px;
   transition: all 0.3s ease;
   text-align: center;
-  align-self: flex-start;
+  font-size: 0.9rem;
+  white-space: nowrap;
   box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  align-self: flex-start;
+  margin-top: 8px;
 }
 
 .support-link:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 107, 107, 0.4);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
 }
 
 .support-faq {
@@ -1230,6 +1287,29 @@ main {
     font-size: 2rem;
   }
 
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-hero {
+    padding: 40px 32px;
+  }
+
+  .about-hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .about-card .card-icon {
+    min-width: auto;
+    font-size: 2.8rem;
+  }
+
   .about-cta-section {
     padding: 40px 32px;
   }
@@ -1243,6 +1323,11 @@ main {
     width: 100%;
   }
 
+  .support-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
   .support-banner {
     padding: 40px 32px;
   }
@@ -1251,17 +1336,19 @@ main {
     font-size: 1.6rem;
   }
 
-  .support-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .support-card {
+    flex-direction: column;
+    gap: 16px;
   }
 
-  .support-card {
-    padding: 32px 24px;
+  .support-card .support-icon {
+    min-width: auto;
+    font-size: 3rem;
   }
 
   .support-link {
     width: 100%;
+    align-self: stretch;
   }
 
   .support-faq {
