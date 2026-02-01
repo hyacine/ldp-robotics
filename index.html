@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LDP Robotics</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <!-- Sidebar verticale -->
+  <nav class="sidebar">
+    <div class="logo">
+      <img class="logo-img" src="public/images/logoLDProbotics.jpg" alt="LDP Robotics">
+    </div>
+    <ul class="menu">
+      <li><a href="pages/home.html" class="active">🏠 Accueil</a></li>
+      <li><a href="pages/about.html">ℹ️ À propos</a></li>
+
+      <!-- Équipe avec sous-onglets -->
+      <li class="has-submenu">
+        <a href="pages/teams.html">👥 Équipe</a>
+        <ul class="submenu">
+          <li><a href="pages/mentors.html">Mentors</a></li>
+          <li><a href="pages/eleves.html">Élèves</a></li>
+        </ul>
+      </li>
+
+      <li><a href="pages/schedule.html">📅 Programme</a></li>
+      <li><a href="pages/sponsors.html">🤝 Sponsors</a></li>
+      <li><a href="pages/support.html">💖 Soutenez-nous</a></li>
+      <li><a href="pages/contact.html">📧 Contact</a></li>
+    </ul>
+  </nav>
+  
+  <div class="container">
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Bienvenue chez LDP Robotics</h1>
+        <p>Rejoignez-nous pour une compétition passionnante de robotique où les équipes s'affrontent pour montrer leur ingéniosité et leur créativité.</p>
+        <a href="pages/teams.html" class="btn">Découvrir l'équipe</a>
+      </div>
+      <img class="hero-image" src="public/images/hero.jpg" alt="Robot">
+    </header>
+    
+    <main>
+      <!-- Section galerie (chaque élément une seule fois) -->
+      <section class="gallery-section">
+        <h2>Galerie d'images</h2>
+        <div class="grid">
+          <img src="public/images/robot1.JPG" alt="Robot 1">
+          <!-- video removed to reduce repository size -->
+          <img src="public/images/team.jpg" alt="Équipe">
+        </div>
+      </section>
+
+      <!-- Section info -->
+      <section class="info-section">
+        <div class="card">
+          <div class="card-icon">🏆</div>
+          <h3>Compétition</h3>
+          <p>Participez à des défis robotiques passionnants et remportez des prix exceptionnels.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎓</div>
+          <h3>Apprentissage</h3>
+          <p>Développez vos compétences en robotique, électronique et programmation.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <h3>Communauté</h3>
+          <p>Rencontrez d'autres passionnés et créez des liens durables.</p>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="footer">
+      <p>&copy; 2025 LDP Robotics. Tous droits réservés.</p>
+    </footer>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

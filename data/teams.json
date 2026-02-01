@@ -1,0 +1,46 @@
+[
+    {
+        "teamName": "Team Alpha",
+        "teamNumber": 101,
+        "members": [
+            "Alice Dupont",
+            "Bob Martin",
+            "Charlie Petit"
+        ],
+        "robotName": "RoboAlpha",
+        "description": "Team Alpha is known for their innovative designs and strong teamwork."
+    },
+    {
+        "teamName": "Team Beta",
+        "teamNumber": 102,
+        "members": [
+            "David Lefevre",
+            "Eva Moreau",
+            "Frank Simon"
+        ],
+        "robotName": "RoboBeta",
+        "description": "Team Beta excels in programming and strategy."
+    },
+    {
+        "teamName": "Team Gamma",
+        "teamNumber": 103,
+        "members": [
+            "Grace Martin",
+            "Henry Dubois",
+            "Isabelle Laurent"
+        ],
+        "robotName": "RoboGamma",
+        "description": "Team Gamma focuses on mechanical engineering and efficiency."
+    },
+    {
+        "teamName": "Team Delta",
+        "teamNumber": 104,
+        "members": [
+            "Jack Bernard",
+            "Kathy Rousseau",
+            "Liam Fournier"
+        ],
+        "robotName": "RoboDelta",
+        "description": "Team Delta is recognized for their creative problem-solving skills."
+    }
+]
